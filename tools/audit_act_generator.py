@@ -1,0 +1,1 @@
+Implementar un generador único de actas que reciba hallazgos con `finding_id` estable y produzca Markdown versionado, JSON para API, resumen CHECKPOINT y manifest SHA256. Incluir timestamp, modelo/instancia, fuentes leídas completas con hash, código/datos de entrada y estado. Prohibir referencias operativas por número mutable de fila del Sheet.
