@@ -1,0 +1,1 @@
+Crear un generador único de actas que reciba JSON estable y produzca Markdown firmado, resumen CHECKPOINT y payload de Hub. Incluir ID inmutable, timestamp UTC, modelo/instancia, archivos leídos con hashes, alcance, hallazgos, tareas y SHA256. Sustituir referencias a números de fila por IDs estables y añadir pruebas de idempotencia.
