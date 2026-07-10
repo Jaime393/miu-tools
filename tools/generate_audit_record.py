@@ -1,0 +1,1 @@
+Implementar un generador único de actas de auditoría que, desde una tarea ejecutada, produzca Markdown versionado, JSON para API, entrada comprimida de CHECKPOINT y registro para Audit Log con ID estable, timestamps, estado éxito/fallo, URLs, commit, hashes y modelo/instancia. Debe ser idempotente y rechazar referencias por número mutable de fila.
