@@ -1,0 +1,1 @@
+:root{--bg:#0a0a0b;--lime:#a3ff12;--violet:#7c3aed;--cyan:#22d3ee}body{background:var(--bg);color:white;font-family:system-ui}.glass{backdrop-filter:blur(12px);background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:16px}.bento{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
