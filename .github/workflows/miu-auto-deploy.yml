@@ -1,0 +1,30 @@
+name: MIU Auto-Deploy Sin PAT
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+  pages: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Auto-create MIU files
+        run: |
+          cat > FUNDING.yml << 'EOF'
+          github: [Jaime393]
+          open_collective: miu-ecosistema
+          custom: https://www.buymeacoffee.com/miu
+          # $1M -> $107M Phi_Red
+          EOF
+          echo "# MIU Auto-Deploy" > AUTO_DEPLOY.md
+          git config user.name "miu-tejedor"
+          git config user.email "miu@local"
+          git add FUNDING.yml AUTO_DEPLOY.md
+          git diff --staged --quiet || git commit -m "MIU Auto-Deploy sin PAT - GITHUB_TOKEN - independencia total"
+          git push origin main
