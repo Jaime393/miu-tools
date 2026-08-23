@@ -1,0 +1,1 @@
+export default { async fetch(req){ return new Response('global mind 16/16 - 1 click Colab - 10 manos') } }
