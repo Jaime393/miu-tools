@@ -1,1 +1,7 @@
-Implementar un generador único de actas de auditoría que, desde una tarea ejecutada, produzca Markdown versionado, JSON para API, entrada comprimida de CHECKPOINT y registro para Audit Log con ID estable, timestamps, estado éxito/fallo, URLs, commit, hashes y modelo/instancia. Debe ser idempotente y rechazar referencias por número mutable de fila.
+#!/usr/bin/env python3
+"""Compatibility CLI: the canonical implementation is audit_record_generator.py."""
+from pathlib import Path
+import runpy
+
+if __name__ == "__main__":
+    runpy.run_path(str(Path(__file__).with_name("audit_record_generator.py")), run_name="__main__")
