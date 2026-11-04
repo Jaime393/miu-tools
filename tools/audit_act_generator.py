@@ -1,1 +1,7 @@
-Implementar un generador único de actas que reciba hallazgos con `finding_id` estable y produzca Markdown versionado, JSON para API, resumen CHECKPOINT y manifest SHA256. Incluir timestamp, modelo/instancia, fuentes leídas completas con hash, código/datos de entrada y estado. Prohibir referencias operativas por número mutable de fila del Sheet.
+#!/usr/bin/env python3
+"""Compatibility CLI: the canonical implementation is audit_record_generator.py."""
+from pathlib import Path
+import runpy
+
+if __name__ == "__main__":
+    runpy.run_path(str(Path(__file__).with_name("audit_record_generator.py")), run_name="__main__")

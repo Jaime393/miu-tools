@@ -1,1 +1,10 @@
-Crear un acta única de auditoría generada desde JSON: incluir ID estable, timestamp UTC, modelo/instancia, entradas con hash, código/commit, niveles epistémicos y resultados. Generar desde ella Markdown, resumen para CHECKPOINT y payload de Hub. Añadir IDs estables para evitar referencias frágiles por número de fila y verificar que la misma auditoría no se registre cuatro veces en formatos divergentes.
+#!/usr/bin/env python3
+"""Compatibility CLI for the single canonical audit generator."""
+from pathlib import Path
+import runpy
+
+if __name__ == "__main__":
+    runpy.run_path(
+        str(Path(__file__).resolve().parents[1] / "tools" / "audit_record_generator.py"),
+        run_name="__main__",
+    )
